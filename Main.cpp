@@ -6,10 +6,10 @@
 int main() {
 
 
-	Time abd;
-	abd.setTime(0,0,0 );
-	abd.printUniversal();
-	abd.printStandard();
+	Time t;
+	t.setTime(13,27,6 );
+	t.printUniversal();
+	t.printStandard();
 
 
 

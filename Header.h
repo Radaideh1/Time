@@ -15,7 +15,10 @@ class Time {
 public:
 	// give the valu the init value (0)
 	Time();
-	// set the time and check !!
+	/* set the time and check !!
+	 23 <= h <= 00
+	 59 <= m <= 00
+	 59 <= s <= 00*/
 	void setTime(int h, int m, int s);
 	// 24 
 	void printUniversal();

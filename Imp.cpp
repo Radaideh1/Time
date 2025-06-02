@@ -11,24 +11,12 @@ Time::Time() {
 };
 
 
-// h 23  , 00
-// m 59  , 00
-// s 59  , 0 0
-void Time::Time::setTime(int h, int m, int s) {
 
-	if (m > 59 || m < 0 || s > 59 || s < 0) {
-		m = s = 0;
-	}
-	else {
-		minute = m;
-		second = s;
-	}
-	if (h > 23 || h < 0) {
-		h = 0;
-	}
-	else {
-		hour = h;
-	}
+void Time::setTime(int h, int m, int s) {
+
+	(m > 59 || m < 0 || s > 59 || s < 0 ? m = s = 0 : minute = m, second = s);
+	(h > 23 || h < 0 ? h = 0 : hour = h);
+
 }
 
 void Time::printUniversal() {
@@ -42,7 +30,7 @@ void Time::printUniversal() {
 void Time::printStandard() {
 
 	cout << std::setfill('0') << std::setw(2) << (hour == 0 || hour == 12 ? 12 : hour % 12)<<
-		':' << std::setw(2)<< minute << ':' << std::setw(2) << second << endl;
+		':' << std::setw(2)<< minute << ':' << std::setw(2) << second <<(hour < 12?" Am":" PM") << endl;
 
 
 }
