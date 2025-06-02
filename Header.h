@@ -13,10 +13,13 @@ class Time {
 
 
 public:
-
+	// give the valu the init value (0)
 	Time();
-	void setTime(int ,int ,int);
+	// set the time and check !!
+	void setTime(int h, int m, int s);
+	// 24 
 	void printUniversal();
+	// 12
 	void printStandard();
 
 
