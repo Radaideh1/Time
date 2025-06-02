@@ -33,14 +33,16 @@ void Time::Time::setTime(int h, int m, int s) {
 
 void Time::printUniversal() {
 
-
+	cout << std::setfill('0') << std::setw(2) << hour << ':'<< std::setw(2) 
+		<< minute <<':'<< std::setw(2) << second << endl;
 
 
 }
 
 void Time::printStandard() {
 
-
+	cout << std::setfill('0') << std::setw(2) << (hour == 0 || hour == 12 ? 12 : hour % 12)<<
+		':' << std::setw(2)<< minute << ':' << std::setw(2) << second << endl;
 
 
 }
